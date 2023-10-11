@@ -5,11 +5,13 @@ import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="h-screen">
       <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </>
+      <div className="py-16 h-screen">
+        <Component {...pageProps} />
+      </div>
+      {/* <Footer /> */}
+    </div>
   );
 }
 

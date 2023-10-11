@@ -19,7 +19,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -27,4 +27,20 @@ a {
     color: white;
     background: black;
   }
+} */
+.article {
+  @apply mt-5 flex justify-center items-center;
 }
+.article-row-flex {
+  @apply my-40 flex flex-row justify-evenly items-center;
+}
+.article-row-flex-reverse {
+  @apply my-40 flex flex-row-reverse justify-evenly items-center;
+}
+.link {
+  @apply text-xl text-blue-500 underline underline-offset-auto;
+}
+
+/* .min-h- {
+  min-height: :;
+} */

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="w-full h-16 border-b-2 flex items-center justify-around">
+    <header className="w-full h-16 border-b-2 flex items-center justify-around fixed z-50">
       <div>
         <LinkButton href={"/"}>TEMP HEADER</LinkButton>
       </div>

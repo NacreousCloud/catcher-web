@@ -44,3 +44,16 @@ a {
 /* .min-h- {
   min-height: :;
 } */
+
+.badge {
+  @apply border-black border-2 rounded-xl m-1 inline-block px-2;
+}
+
+.title {
+  @apply text-3xl font-bold;
+}
+
+.resume-box {
+  @apply grid;
+  grid-template-columns: 1fr 2fr;
+}

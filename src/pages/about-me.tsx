@@ -1,76 +1,54 @@
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 const aboutMe = () => {
   return (
     <div className="w-full h-full">
       <div className="w-3/4 h-full m-auto  flex flex-row gap-5 mt-5">
         <div className="w-1/3">
-          <div className="rounded bg-zinc-300 w-full p-5 mb-10">
+          <div className="rounded bg-zinc-100 w-full p-5 mb-10">
             <span>김강현</span>
             <p>문제해결을 좋아하는 개발자</p>
             <p>bebekh1216@gmail.com</p>
           </div>
-          <div className="rounded bg-zinc-300 w-full p-5 my-10">
-            <span>기술스택</span>
+          <div className="rounded bg-zinc-100 w-full p-5 my-10">
+            <span className="title">기술스택</span>
             <div className="">
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                javascript
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                typescript
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                nodejs
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                react.js
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                nextjs
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                Ubuntu
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                python
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                docker
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                css/scss
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                tailwind
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                AWS
-              </span>
-              <span className=" border-black border-2 rounded-xl m-1 inline-block px-2">
-                recoil
-              </span>
+              <span className="badge bg-yellow-300">javascript</span>
+              <span className="badge bg-blue-400">typescript</span>
+              <span className="badge bg-green-500">nodejs</span>
+              <span className="badge bg-cyan-400">react.js</span>
+              <span className="badge bg-black text-white">nextjs</span>
+              <span className="badge bg-orange-400">Ubuntu</span>
+              <span className="badge bg-blue-500 ">python</span>
+              <span className="badge bg-sky-500">docker</span>
+              <span className="badge bg-pink-400">css/scss</span>
+              <span className="badge bg-cyan-200">tailwind</span>
+              <span className="badge bg-blue-950 text-white">AWS</span>
+              <span className="badge bg-blue-400">recoil</span>
             </div>
           </div>
         </div>
-        <div className="w-2/3 h-full rounded bg-zinc-300 p-5">
-          <div>
-            <span>Experience</span>
+        <div className="w-3/4 h-full rounded bg-zinc-100 p-5">
+          <div className="resume-box">
+            <span className="title">Experience</span>
             <div>
+              {/* TODO: 업무경험 컴포넌트 추가 */}
               <article></article>
             </div>
           </div>
-          <div>
-            <span>Education</span>
-            <div>
-              <article>
-                <div>2014-03 ~ 2018-02</div>
-                <div>
+          <div className="resume-box">
+            <span className="title">Education</span>
+            <div className="pt-5">
+              {/* TODO: 학력 item 컴포넌트 추가 */}
+              <article className="grid grid-cols-4">
+                <div className="col-span-1">2014-03 ~ 2018-02</div>
+                <div className="col-span-3">
                   <h3>동서대학교</h3>
-                  <h5>정보통신공학 전공</h5>
-                  <h5>4.17 / 4.5</h5>
+                  <h5 className="text-sm">정보통신공학 전공</h5>
+                  <h5 className="text-sm">4.17 / 4.5</h5>
                 </div>
               </article>
-              <article>
+              {/* <article>
                 <div>2020-02 ~ 2020-12</div>
                 <div>
                   <h3>삼성청년 소프트웨어 아카데미 3기 이수</h3>
@@ -93,7 +71,7 @@ const aboutMe = () => {
                     27
                   </h5>
                 </div>
-              </article>
+              </article> */}
             </div>
           </div>
         </div>
@@ -102,7 +80,7 @@ const aboutMe = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
     props: {},
   };

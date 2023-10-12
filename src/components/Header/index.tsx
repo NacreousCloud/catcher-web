@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="w-full h-16 border-b-2 flex items-center justify-around fixed z-50">
       <div>
-        <LinkButton href={"/"}>TEMP HEADER</LinkButton>
+        <LinkButton href={"/"}>It&apos;s Cloudy</LinkButton>
       </div>
       <div>
         <LinkButton href={"about-me"}>About Me</LinkButton>
